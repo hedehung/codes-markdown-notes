@@ -1,5 +1,4 @@
-###样例
-	vim .gemrc
+###vim ~/.gemrc
 	---
 	:update_sources: true
 	:backtrace: false
