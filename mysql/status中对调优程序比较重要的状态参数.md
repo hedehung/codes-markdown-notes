@@ -45,3 +45,6 @@ mysql> show status like 'innodb_row_lock%';
 +----------------------------------------+----------+
 5 rows in set (0.00 sec)
 ```
+
+###Bytes_received和Bytes_sent
+和服务器之间来往的流量。
