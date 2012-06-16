@@ -48,3 +48,18 @@ mysql> show status like 'innodb_row_lock%';
 
 ###Bytes_received和Bytes_sent
 和服务器之间来往的流量。
+
+###Sort_
+```
+| Sort_merge_passes                 | 0            |
+| Sort_range                        | 23956        |
+| Sort_rows                         | 340622       |
+| Sort_scan                         | 1101         |
+```
+
+###Created_
+```
+| Created_tmp_disk_tables           | 2531108      |
+| Created_tmp_files                 | 5            |
+| Created_tmp_tables                | 2532623      |
+```
