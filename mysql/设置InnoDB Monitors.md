@@ -1,6 +1,6 @@
 针对Innodb 类型的表，如果需要察看当前的锁等待情况，可以设置InnoDB Monitors，然后通过Show innodb status 察看。  
 ```
-	CREATE TABLE innodb_monitor(a INT) ENGINE=INNODB;
+CREATE TABLE innodb_monitor(a INT) ENGINE=INNODB;
 ```
 监视器可以通过发出下列语句来被停止
 ```
