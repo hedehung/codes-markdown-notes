@@ -19,3 +19,9 @@ SELECT * FROM mytale IGNORE INDEX (priority) ...
 ```
 SELECT * FROM mytable FORCE INDEX (mod_time) ...
 ```
+
+###SQL_NO_CACHE
+不从查询缓存取得查询结果。
+```
+SELECT SQL_NO_CACHE * FROM mytable...
+```
