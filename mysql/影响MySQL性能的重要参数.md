@@ -3,37 +3,53 @@
 使用方法：
 mysql5.1 以前只允许使用一个系统默认的key_buffer
 mysql5.1 以后提供了多个key_buffer，可以将指定的表索引缓存入指定的key_buffer，这样可以更小的降低线程之间的竞争，相关语法如下：例如，下面的语句将表t1、t2 和t3 的索引分配给名为hot_cache 的键高速缓冲：
-	mysql> CACHE INDEX t1, t2, t3 IN hot_cache;
+```
+mysql> CACHE INDEX t1, t2, t3 IN hot_cache;
+```
 可以用SET GLOBAL 参数设置语句或使用服务器启动选项设置在CACHE INDEX 语句中引用的键高速缓冲的大小来创建键高速缓冲。例如：
-	mysql> SET GLOBAL keycache1.key_buffer_size=128*1024;
+```
+mysql> SET GLOBAL keycache1.key_buffer_size=128*1024;
+```
 要想删除键高速缓冲，将其大小设置为零：
-	mysql> SET GLOBAL keycache1.key_buffer_size=0;
+```
+mysql> SET GLOBAL keycache1.key_buffer_size=0;
+```
 请注意不能删除默认键高速缓冲。删除默认键高速缓冲的尝试将被忽略CACHE INDEX 在一个表和键高速缓冲之间建立一种联系，但每次服务器重启时该联系被丢失。如果你想要每次服务器重启时该联系生效，一个发办法是使用选项文件：包括配置键高速缓冲的变量设定值，和一个init-file 选项用来命名包含待执行的
 CACHE INDEX 语句的一个文件。例如：
-	key_buffer_size = 4G
-	hot_cache.key_buffer_size = 2G
-	cold_cache.key_buffer_size = 2G
-	init_file=/path/to/data-directory/mysqld_init.sql
+```
+key_buffer_size = 4G
+hot_cache.key_buffer_size = 2G
+cold_cache.key_buffer_size = 2G
+init_file=/path/to/data-directory/mysqld_init.sql
+```
 每次服务器启动时执行mysqld_init.sql 中的语句。该文件每行应包含一个SQL 语句。
 下面的例子分配几个表，分别对应hot_cache 和cold_cache：
-	CACHE INDEX a.t1, a.t2, b.t3 IN hot_cache
-	CACHE INDEX a.t4, b.t5, b.t6 IN cold_cache
+```
+CACHE INDEX a.t1, a.t2, b.t3 IN hot_cache
+CACHE INDEX a.t4, b.t5, b.t6 IN cold_cache
+```
 要想将索引预装到缓存中，使用LOAD INDEX INTO CACHE 语句。例如，下面的语句可以预装表t1 和t2 索引的非叶节点(索引块)：
-	mysql> LOAD INDEX INTO CACHE t1, t2 IGNORE LEAVES;
+```
+mysql> LOAD INDEX INTO CACHE t1, t2 IGNORE LEAVES;
+```
 键高速缓冲可以通过更新其参数值随时重新构建。例如：
-	mysql> SET GLOBAL cold_cache。key_buffer_size=4*1024*1024；
+```
+mysql> SET GLOBAL cold_cache。key_buffer_size=4*1024*1024；
+```
 如果你很少使用MyISAM 表，那么也保留低于16-32MB 的key_buffer_size 以适应给予磁盘的临时表索引所需。
 
 ###table_cache的设置
 数据库中打开表的缓存数量。table_cache 与max_connections 有关。例如，对于200 个并行运行的连接，应该让表的缓存至少有200 * N，这里N 是可以执行的查询的一个联接中表的最大数量。还需要为临时表和文件保留一些额外的文件描述
 符。
 设置技巧：可以通过检查mysqld 的状态变量Opened_tables 确定表缓存是否太小：
-	mysql> SHOW STATUS LIKE 'Opened_tables';
-	+---------------+-------+
-	| Variable_name | Value |
-	+---------------+-------+
-	| Opened_tables | 2741 |
-	+---------------+-------+
+```
+mysql> SHOW STATUS LIKE 'Opened_tables';
++---------------+-------+
+| Variable_name | Value |
++---------------+-------+
+| Opened_tables | 2741 |
++---------------+-------+
+```
 如果值很大，即使你没有发出许多FLUSH TABLES 语句，也应增加表缓存的大小。
 
 ###innodb_buffer_pool_size 的设置
