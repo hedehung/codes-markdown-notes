@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/debugger/pcodes/my_github_gems/cache-server-connector/examples'
-let g:netrw_dirhist_2='/Users/debugger/pcodes/galaxy_gateway'
-let g:netrw_dirhist_3='/Users/debugger/pcodes/galaxy_empire'
-let g:netrw_dirhist_4='/Users/debugger/pcodes/civisland_gateway'
-let g:netrw_dirhist_5='/Users/debugger/pcodes/civisland_gateway/config/push_notification_files'
-let g:netrw_dirhist_6='/Users/debugger/pcodes/users_center/.yardoc'
-let g:netrw_dirhist_7='/Users/debugger/pcodes/galaxy_admin_api/config/deploy'
