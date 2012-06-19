@@ -13,3 +13,5 @@ Cmnd_Alias DENY_CMD=!/usr/sbin/useradd,!/usr/sbin/userdel,!/usr/sbin/usermod -*,
 root	ALL=(ALL) ALL
 账号  ALL=(ALL) NOPASSWD: ALL,DENY_CMD
 ```
+
+为了禁止编辑sudoers文件，可以禁用/etc/sudoers文件，命令是/usr/sbin/visudo.
