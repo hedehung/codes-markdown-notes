@@ -5,6 +5,8 @@
 * [type] 根据文件类型来查找
 * [name] 文件名样式
 * [regex] 文件名的正则表达式   
+
+#按照属性查找实例
 ```
 find ./ -type f  -name grep.txt # 查找文件名是grep.txt的普通文件
 find ./ -type f -regex ".*.[txt|c]" # 查找文件名以txt和c的普通文件 
