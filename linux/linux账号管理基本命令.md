@@ -52,6 +52,11 @@ sudo useradd -u 1002 -d /home/xxx/ -m -s /bin/bash xxx
 ```
 vim /etc/group
 ```
+###把用户踢出组
+```
+sudo gpasswd -d ubuntu admin 或
+sudo vim /etc/passwd 找到用户的那行把定义的组删除掉
+```
 ###查询活动用户
 ```
 who -Ha
