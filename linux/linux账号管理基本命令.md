@@ -13,13 +13,10 @@ userdel ubuntu
 ```
 ###更换用户的shell
 ```
-sudo usermod -s /bin/ksh ubuntu
-mac使用chsh(change shell)
+sudo usermod -s /bin/ksh ubuntu #mac使用chsh(change shell)
 ```
 ###封锁账号
-```
-#在/etc/passwd文件相应账号的密码字段加星号*
-```
+在/etc/passwd文件相应账号的密码字段加星号*
 ###更改密码
 ```
 passwd #更改当前用户密码
