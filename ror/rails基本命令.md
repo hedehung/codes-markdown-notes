@@ -4,6 +4,7 @@
 * rails s 启动服务器
 * rails s -p 8080 指定端口启动服务器
 * rails dbconsole 进入数据库shell命令行
+* rails db 同上
 * rails generate controller users 生成控制器
 * rails generate controller admin/users 指定空间
 * rails generate controller Greetings hello 指定方法
