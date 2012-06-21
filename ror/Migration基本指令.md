@@ -58,6 +58,7 @@ migration支持的列的类型
 * :text
 * :time
 * :timestamp
+
 可以没有枚举类型的直接支持，有人实现了mysql的枚举类型支持，可以参考[https://github.com/electronick/enum_column](https://github.com/electronick/enum_column)
 
 可以直接创建模型来创建对应的migrations文件  
