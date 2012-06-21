@@ -1,6 +1,6 @@
 ###首先添加HTTP-SSL模块，检查openssl组件是否安装
 ```
-$ whereis openssl
+whereis openssl
 openssl: /usr/bin/openssl /usr/include/openssl /usr/share/man/man1/openssl.1ssl.gz
 ```
 ###已安装，非常good，重新编译NGINX
