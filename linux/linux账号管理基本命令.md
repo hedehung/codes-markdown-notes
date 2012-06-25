@@ -26,6 +26,10 @@ sudo passwd ubuntu #更改用户ubuntu的密码
 ```
 sudo passwd -e ubuntu
 ```
+###锁定用户
+```
+sudo passwd -l ubuntu
+```
 ###查询当前用户的id信息
 ```
 whoami
