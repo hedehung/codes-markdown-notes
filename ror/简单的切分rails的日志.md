@@ -10,7 +10,6 @@ echo -n > /var/www/apps/galaxy/current/log/production.log
 #####每天切分一次日志文件
 ```
 config.logger = Logger.new("#{Rails.root}/log/#{Rails.env}#{Date.today.to_s}.log", "daily")
-
 ```
 ####按日志文件大小切分,每50M切分一次（即每50M时轮换一次）
 ```
