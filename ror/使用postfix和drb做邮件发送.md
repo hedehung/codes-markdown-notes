@@ -36,7 +36,12 @@ sudo service postfix restart
 
 ###telnet测试
 ```
-telnet 域名 smtp 
+/* 端口默认25 */
+telnet 邮件服务器域名或者ip地址 smtp 
+```
+
+###邮件协议命令
+```
 >mail from: xxx
 >rcpt to: xxx
 >data
