@@ -96,3 +96,8 @@ DRb.thread.join
 ```
 v=spf1 ipv4:邮件服务器ip a mx ~all
 ```
+
+###shell启动脚本
+```
+nohup ./mail_server.rb& > /dev/null 2>&1
+```
