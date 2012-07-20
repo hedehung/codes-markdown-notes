@@ -5,7 +5,7 @@ sudo apt-get install postfix
 
 ###配置postfix
 ```
-/*重要参数 */
+/* 重要参数 */
 myhostname = mailserver.abc.com
 /* 重要参数 */
 mydomain = mailserver.abc.com
@@ -35,7 +35,7 @@ sudo service postfix restart
 ```
 
 ###编写drb邮件服务接口
-```
+```ruby
 #!/usr/bin/env ruby
 
 require 'drb'
