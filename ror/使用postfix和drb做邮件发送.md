@@ -34,6 +34,24 @@ sudo vim /etc/hosts
 sudo service postfix restart
 ```
 
+###telnet测试
+```
+telnet 域名 smtp 
+>mail from: xxx
+>rcpt to: xxx
+>data
+>From:xxx
+>To:xxx 
+>Subject:xxx 
+>Content-type:xxx 
+>Content-Transfer-Encoding:xxx 
+>
+>内容
+>.
+>quit 
+>
+```
+
 ###编写drb邮件服务接口
 ```ruby
 #!/usr/bin/env ruby
