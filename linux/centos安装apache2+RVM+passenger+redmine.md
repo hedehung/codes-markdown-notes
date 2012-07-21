@@ -154,12 +154,10 @@ RAILS_ENV=production rake redmine:load_default_data
 ###启动测试
 ```
 ruby script/rails server webrick -e production
-
 ```
 
 ###访问使用默认的用户名和密码登录
 ```
 login: admin
 password: admin
-
 ```
