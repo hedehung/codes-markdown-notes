@@ -162,3 +162,6 @@ ruby script/rails server webrick -e production
 login: admin
 password: admin
 ```
+
+###设置邮箱
+[参考action_mailer for gmail](https://github.com/collectiveidea/action_mailer_optional_tls/tree/)
