@@ -138,6 +138,10 @@ ruby script/rails server webrick -e production
 
 ###访问使用默认的用户名和密码登录
 ```
+/* cannot load such file -- phusion_passenger/analytics_logger */
+gem install passenger
+
+/* admin:admin */
 login: admin
 password: admin
 ```
