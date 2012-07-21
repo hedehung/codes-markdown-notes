@@ -141,6 +141,9 @@ ruby script/rails server webrick -e production
 /* cannot load such file -- phusion_passenger/analytics_logger */
 gem install passenger
 
+/* 清除svn标记 */
+find . -type d -name ".svn"|xargs rm -rf
+
 /* admin:admin */
 login: admin
 password: admin
