@@ -142,6 +142,7 @@ ruby script/rails server webrick -e production
 gem install passenger
 
 /* 清除svn标记 */
+
 find . -type d -name ".svn"|xargs rm -rf
 
 /* admin:admin */
@@ -150,4 +151,10 @@ password: admin
 ```
 
 ###设置邮箱
+[redmine installation](http://www.redmine.org/projects/redmine/wiki/RedmineInstall)
 [参考action_mailer for gmail](https://github.com/collectiveidea/action_mailer_optional_tls/tree/)
+
+###ruby-1.9x的编码问题
+```
+ActionView::Template::Error (incompatible character encodings: UTF-8 and ASCII-8BIT)
+```
