@@ -100,6 +100,7 @@ svn co http://redmine.rubyforge.org/svn/branches/2.0-stable ./
 ###修改权限
 ```
 chown -R www.www redmine/
+cd public_html
 chmod -R 755 files log tmp public/plugin_assets
 ```
 
