@@ -53,36 +53,15 @@ PassengerRuby /usr/local/rvm/rubies/ruby-1.9.3-head/bin/ruby
 
 ###增加redmine的vhost配置
 ```
-DocumentRoot /home/wwwroot/redmine/public_html
-ServerName redmine.abc.com
-ServerAlias redmine.abc.com
-ErrorDocument 400 /errpage/400.html
-ErrorDocument 403 /errpage/403.html
-ErrorDocument 404 /errpage/404.html
-ErrorDocument 405 /errpage/405.html
-php_admin_value open_basedir /home/wwwroot/redmine:/tmp
-<IfModule mod_deflate.c>
-DeflateCompressionLevel 7
-AddOutputFilterByType DEFLATE text/html text/plain text/xml application/x-httpd-php
-AddOutputFilter DEFLATE css js html htm gif jpg png bmp php
-</IfModule>
-<IfModule mod_expires.c>
-ExpiresActive On
-ExpiresByType image/gif A86400
-ExpiresByType image/jpeg A86400
-ExpiresByType image/png A864000
-ExpiresByType text/css A86400
-ExpiresByType application/x-shockwave-flash A86400
-ExpiresByType application/x-javascript A86400
-ExpiresByType video/x-flv A86400
-ExpiresDefault A86400
-</IfModule>
+<VirtualHost *:80>
+DocumentRoot /home/wwwroot/redmine/public_html/public
+ServerName redmine.sweetsoft.cc
+ServerAlias redmine.sweetsoft.cc
 </VirtualHost>
-<Directory /home/wwwroot/redmine/public_html>
-    Options FollowSymLinks
+<Directory /home/wwwroot/redmine/public_html/public>
     AllowOverride All
-    Order allow,deny
     Allow from all
+    Options -MultiViews
 </Directory>
 ```
 
