@@ -45,6 +45,7 @@ cd /usr/local/passenger-3.0.11
 
 ###修改apache2的httpd.conf文件加入passenger的动态库
 ```
+/* 安装完passenger会有下面三行的提示 */
 LoadModule passenger_module /usr/local/passenger-3.0.11/ext/apache2/mod_passenger.so  
 PassengerRoot  /usr/local/passenger-3.0.11
 PassengerRuby /usr/local/rvm/rubies/ruby-1.9.3-head/bin/ruby
