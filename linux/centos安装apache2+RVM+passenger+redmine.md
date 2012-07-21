@@ -47,7 +47,7 @@ cd /usr/local/passenger-3.0.11
 ```
 LoadModule passenger_module /usr/local/passenger-3.0.11/ext/apache2/mod_passenger.so  
 PassengerRoot  /usr/local/passenger-3.0.11
-PassengerRuby /usr/local/bin/ruby
+PassengerRuby /usr/local/rvm/rubies/ruby-1.9.3-head/bin/ruby
 ```
 
 ###增加redmine的vhost配置
