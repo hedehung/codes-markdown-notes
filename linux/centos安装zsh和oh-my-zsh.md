@@ -8,7 +8,7 @@ yum install zsh
 wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
 ```
 
-###另外一个.zshrc配置也非常不错
+###这个.zshrc配置也非常不错(支持SVN信息显示)
 ```
 cd ~ && wget -O .zshrc http://git.grml.org/f/grml-etc-core/etc/zsh/zshrc && source ~/.zshrc
 ```
