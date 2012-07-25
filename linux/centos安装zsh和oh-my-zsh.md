@@ -17,3 +17,8 @@ cd ~ && wget -O .zshrc http://git.grml.org/f/grml-etc-core/etc/zsh/zshrc && sour
 ```
 chsh -s /bin/zsh
 ```
+
+###MacOSX下的命令有点不同
+```
+chsh -s /bin/zsh -udebugger
+```
