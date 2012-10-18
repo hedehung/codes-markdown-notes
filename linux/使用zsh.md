@@ -15,3 +15,5 @@ cd ~ && wget -O .zshrc http://git.grml.org/f/grml-etc-core/etc/zsh/zshrc && sour
 https://github.com/robbyrussell/oh-my-zsh
 ```
 猛击[oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+
+
