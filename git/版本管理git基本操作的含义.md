@@ -27,25 +27,25 @@ git commit -m "改动消息"
 git push origin master
 ```
 
-###分支管理
-1. 创建分支
+###分支管理 
+1. 创建分支 
 ```
 git checkout -b feature_x 
-```
-2. 切换回主分支
+``` 
+2. 切换回主分支   
 ```
 git checkout master 
 ```
-3. 删除分支
+3. 删除分支        
 ```
 git branch -d feature_x
 ```
-4. 将分支推送到远端仓库一遍他人可见 
+4. 将分支推送到远端仓库以便他人可见   
 ```
 git push origin 分支名称
 ```
 
-###更新和合并  
+###更新和合并   
 1. 更新本地仓库到最新改动  
 ```
 git pull 
