@@ -1,3 +1,8 @@
+###git文件三种状态
+1. commited已提交,文件已经安全的保存到本地数据库.
+2. modified已修改,文件被修改但是还没有提交保存.
+3. staged已暂存,把已修改的文件保存到下次要提交的保存清单中.
+
 ###初始化
 ```
 mkdir project_dir && cd project_dir && git init
