@@ -42,7 +42,7 @@ git branch -d feature_x
 ```
 4. 将分支推送到远端仓库一遍他人可见 
 ```
-git push origin <分支名称>
+git push origin 分支名称
 ```
 
 ### 更新和合并  
@@ -52,8 +52,8 @@ git pull
 ```
 2. 合并  
 ```
-git merge <分支名称>   
-git merge --no-ff <分支名称> 
+git merge 分支名称
+git merge --no-ff 分支名称
 ```
 3. 合并改动之前查看修改   
 ```
