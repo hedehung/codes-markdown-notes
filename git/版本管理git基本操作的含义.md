@@ -36,7 +36,7 @@ git push origin master
 ###分支管理 
 1. 创建分支   
 ```
-git checkout -b feature_x 
+git checkout -b feature_x 或 git checkout -b feature_x develop
 ``` 
 2. 切换回主分支   
 ```
