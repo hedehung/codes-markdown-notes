@@ -50,10 +50,10 @@ git push origin <分支名称>
 ```
 git pull 
 ```
-2. 合并 
+2. 合并  
 ```
-git merge <分支名称>
-git merge --no-ff <分支名称>
+git merge <分支名称> 
+git merge --no-ff <分支名称> 
 ```
 3. 合并改动之前查看修改
 ```
