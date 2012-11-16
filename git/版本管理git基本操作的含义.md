@@ -45,7 +45,7 @@ git branch -d feature_x
 git push origin 分支名称
 ```
 
-### 更新和合并  
+###更新和合并  
 1. 更新本地仓库到最新改动  
 ```
 git pull 
