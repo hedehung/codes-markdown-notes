@@ -75,9 +75,44 @@ git diff
 git diff --cached
 ```
 
+###删除文件
+```
+git rm 文件 或 git rm -f 文件
+```
+
+###从跟踪清单中移除保留文件,以便稍后在.gitignore文件中补上
+```
+git rm --cached 文件或目录
+```
+
+###查看远端仓库的详细信息
+```
+git remote show origin
+```
+
+###远端仓库重命名
+```
+git remote rename 旧名称 新名称
+```
+
+###移除远端仓库
+```
+git remote rm 名称
+```
+
 ###创建标签
 ```
-git tag 1.0.0 1b2e1d63ff
+git tag 1.0.0 1b2e1d63ff 或 git tag -a v1.2 -m '稳定1.2版本'
+```
+
+###列标签
+```
+git tag 或者 git tag -l "v1.4.*"
+```
+
+###查看相应标签的版本信息
+```
+git show v1.4
 ```
 
 ###用HEAD的内容替换掉本地修改
