@@ -45,8 +45,8 @@ git branch -d feature_x
 git push origin <分支名称>
 ```
 
-### 更新和合并
-1. 更新本地仓库到最新改动 
+### 更新和合并  
+1. 更新本地仓库到最新改动  
 ```
 git pull 
 ```
@@ -55,7 +55,7 @@ git pull
 git merge <分支名称>   
 git merge --no-ff <分支名称> 
 ```
-3. 合并改动之前查看修改
+3. 合并改动之前查看修改   
 ```
 git diff <source_branch> <target_branch>
 ```
