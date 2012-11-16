@@ -100,11 +100,11 @@ git branch -d release-1.x
 ```
 
 ###某些tips  
-1. 简短的状态信息  
+1. 简短的状态信息
 ```
 git status -sb
 ```
-2. 日志显示分支和tag  
+2. 日志显示分支和tag
 ```
 git log --oneline --decorate
 ```
