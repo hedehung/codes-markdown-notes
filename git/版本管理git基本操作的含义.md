@@ -81,18 +81,18 @@ git reset --hard origin/master
 1. 开发分支develop 
 2. 新的功能feature分支 
 3. feature开发完成合并到develop分支上
-4. develop分支经过测试并且决定发布版本后创建出release分支 
-5. release分支用于修复bug,修复的bug分支为bugfix
-6. bugfix分支完成后需要合并到release分支上,并删除bugfix分支
-6. release分支完成后需要合并到develop和master分支,并为master打上tag,并且删除release分支
+4. develop分支经过测试并且决定发布版本后创建出release-1.x分支 
+5. release-1.x分支用于修复bug,修复的bug分支为bugfix
+6. bugfix分支完成后需要合并到release-1.x分支上,并删除bugfix分支
+6. release-1.x分支完成后需要合并到develop和master分支,并为master打上tag,并且删除release-1.x分支
 ```
 git checkout master 
-git merge --no-ff release
-git tag -a 1.2 
+git merge --no-ff release-1.x
+git tag -a 1.x
 git checkout develop 
-git merge --no-ff release 
-git branch -d release
+git merge --no-ff release-1.x
+git branch -d release-1.x
 ```
 7. 如果线上的tag版本出现bug则从master上创建hotfix分支进行修复
 8. hotfix分支修复后合并到master和develop分支,然后删除hotfix分支
-9. 只有有release分支,出现的bug分支就合并到release上面,因为release最后也回合并到develop分支上
+9. 只有有release-1.x分支,出现的bug分支就合并到release-1.x上面,因为release-1.x最后也回合并到develop分支上
