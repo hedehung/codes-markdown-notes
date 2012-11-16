@@ -65,6 +65,16 @@ git merge 分支名称 或 git merge --no-ff 分支名称
 git diff <source_branch> <target_branch>
 ```
 
+###查看改变
+1. 未暂存的文件更新哪些部分
+```
+git diff 
+```
+2. 已经暂存的文件和上次提交的快照之间的差别
+```
+git diff --cached
+```
+
 ###创建标签
 ```
 git tag 1.0.0 1b2e1d63ff
