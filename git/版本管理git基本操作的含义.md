@@ -97,7 +97,7 @@ git remote rename 旧名称 新名称
 
 ###移除远端仓库
 ```
-git remote rm 名称
+git remote rm 名称 或 git push origin :名称(助记:把空推送到远端分支)
 ```
 
 ###创建标签
