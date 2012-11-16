@@ -98,3 +98,38 @@ git checkout develop
 git merge --no-ff release-1.x
 git branch -d release-1.x
 ```
+
+###某些tips  
+1. 简短的状态信息  
+```
+git status -sb
+```
+2. 日志显示分支和tag  
+```
+git log --oneline --decorate
+```
+3. 推送分支并且启动跟踪
+```
+git push -u origin master 或 git config --global push.default tracking
+```
+4. 跟踪其他人的远端分支
+```
+git checkout -t origin/feature
+```
+5. 用--rebase参数
+```
+git pull --rebase 
+```
+在master上相当于git fetch origin,否则相当于git rebase origin/master
+6. 找出改动所在的release
+```
+git name-rev --name-only 50f3754
+```
+7. 找出哪些分支包含了改变
+```
+git branch --contains 50f3754
+```
+8. 查询包含某个注释的上次提交
+```
+git show :/fix 或 git show :/^Merge
+```
