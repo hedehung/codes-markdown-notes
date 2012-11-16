@@ -22,7 +22,7 @@ git add .
 2. 提交到HEAD（但是没有提交到远端仓库） 
 git commit -m "改动消息"
 
-3. 将改动提交到远端仓库（master可以是任何远端仓库）
+3. 将改动提交到远端仓库   
 ```
 git push origin master
 ```
