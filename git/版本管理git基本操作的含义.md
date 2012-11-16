@@ -85,12 +85,16 @@ git reset --hard origin/master
 5. release-1.x分支用于修复bug,修复的bug分支为bugfix
 6. bugfix分支完成后需要合并到release-1.x分支上,并删除bugfix分支
 6. release-1.x分支完成后需要合并到develop和master分支,并为master打上tag,并且删除release-1.x分支
-  git checkout master 
-  git merge --no-ff release-1.x
-  git tag -a 1.x
-  git checkout develop 
-  git merge --no-ff release-1.x
-  git branch -d release-1.x
 7. 如果线上的tag版本出现bug则从master上创建hotfix分支进行修复
 8. hotfix分支修复后合并到master和develop分支,然后删除hotfix分支
 9. 只有有release-1.x分支,出现的bug分支就合并到release-1.x上面,因为release-1.x最后也回合并到develop分支上
+
+###上面第6步说明
+```
+git checkout master 
+git merge --no-ff release-1.x
+git tag -a 1.x
+git checkout develop 
+git merge --no-ff release-1.x
+git branch -d release-1.x
+```
