@@ -164,7 +164,7 @@ git push -u origin master 或 git config --global push.default tracking
 ```
 4. 跟踪其他人的远端分支
 ```
-git checkout -t origin/feature
+git checkout -t origin/feature_from_bob
 ```
 5. 用--rebase参数
 ```
