@@ -18,7 +18,7 @@ end
 
 ###属性
 ```
-attribute	:name
+attribute :name
 ```
 
 ###引用
