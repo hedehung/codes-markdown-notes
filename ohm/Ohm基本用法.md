@@ -74,7 +74,7 @@ end
 ```
 
 ###创建和查询
-```
+```ruby
 event = Event.create :name => "zhangsan"
 event = Event.with(:name => "zhangsan")
 event.id
@@ -94,7 +94,7 @@ sort_by
 ```
 
 ###特殊用法
-```
+```ruby
 self.key[action_key].set action_value
 self.key[action_key].expire USER_ACTION_EXPIRE
 self.key[action_key].get
