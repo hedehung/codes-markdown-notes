@@ -49,7 +49,7 @@ unique
 ```
 
 ###完整的例子
-```
+```ruby
 class Event < Ohm::Model
   attribute :name
   reference :venue, :Venue
