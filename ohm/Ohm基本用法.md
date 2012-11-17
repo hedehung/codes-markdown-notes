@@ -11,7 +11,7 @@ Ohm.redis.get "Foo"
 ```
 
 ###申明模型
-```
+```ruby
 class Event < Ohm::Model
 end
 ```
