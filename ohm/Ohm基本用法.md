@@ -4,7 +4,7 @@ gem install ohm
 ```
 
 ###使用默认的redis配置
-```
+```ruby
 Ohm.connect
 Ohm.redis.set "Foo", "Bar"
 Ohm.redis.get "Foo"
