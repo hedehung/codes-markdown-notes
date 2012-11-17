@@ -85,10 +85,11 @@ Event.all
 
 ###查询支持
 ```
+find
 with
 limit
 order
-by
+by参数
 sort
 sort_by
 ```
