@@ -28,7 +28,7 @@ reference :person, :Person
 
 ###集合
 ```
-set :people, :Person
+set :person, :Person
 ```
 
 ###累计
