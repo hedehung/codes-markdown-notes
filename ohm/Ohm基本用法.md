@@ -95,5 +95,6 @@ sort_by
 ```
 self.key[action_key].set action_value
 self.key[action_key].expire USER_ACTION_EXPIRE
+self.key[action_key].get
 self.key[action_key].del
 ```
