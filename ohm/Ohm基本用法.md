@@ -76,6 +76,7 @@ end
 ###创建和查询
 ```
 event = Event.create :name => "zhangsan"
+event = Event.with(:name => "zhangsan")
 event.id
 event == Event[1]
 Event[2]
@@ -84,6 +85,7 @@ Event.all
 
 ###查询支持
 ```
+with
 limit
 order
 by
