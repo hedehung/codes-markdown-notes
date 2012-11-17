@@ -94,7 +94,7 @@ sort
 sort_by
 ```
 
-###特殊用法
+###特殊用法(直接redis命令)
 ```ruby
 self.key[action_key].set action_value
 self.key[action_key].expire USER_ACTION_EXPIRE
