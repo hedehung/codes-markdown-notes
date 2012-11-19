@@ -140,9 +140,39 @@ git reset --hard origin/master
 9. 只有有release-1.x分支,出现的bug分支就合并到release-1.x上面,因为release-1.x最后也回合并到develop分支上
 
 ###临时分支
-1. 功能性的feature分支
-2. 预发布release分支
-3. 修补漏洞fixbug分支
+1. 功能性的feature分支(从develop分支创建,开发完成合并到develop)
+2. 预发布release分支(从develop分支创建,开发完成合并到develop和master)
+3. 修补漏洞fixbug分支(从master分支创建,开发完成合并到develop和master)
+
+###功能性分支典型操作
+```
+git checkout -b feature-x develop
+git checkout develop
+git merge --no-ff feature-x 
+git branch -d feature-x
+```
+
+###预发布分支典型操作
+```
+git checkout -b release-1.2 develop 
+git checkout master 
+git merge --no-ff release-1.2
+git tag -a 1.2 
+git checkout develop 
+git merge --no-ff release-1.2 
+git branch -d release-1.2
+```
+
+###漏洞分支典型操作
+```
+git checkout -b fixbug-0.1 master 
+git checkout master 
+git merge --no-ff fixbug-0.1
+git tag -a 0.1.1
+git checkout develop 
+git merge --no-ff fixbug-0.1
+git branch -d fixbug-0.1
+```
 
 ###上面第6步说明
 ```
