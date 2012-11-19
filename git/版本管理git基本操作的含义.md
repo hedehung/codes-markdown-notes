@@ -183,7 +183,7 @@ git branch --contains 50f3754
 ```
 git show :/fix 或 git show :/^Merge
 ```
-9. 初始化并且添加远程仓库
+9. 初始化并且添加远程仓库   
 ```
 git init
 git add README
