@@ -139,6 +139,11 @@ git reset --hard origin/master
 8. hotfix分支修复后合并到master和develop分支,然后删除hotfix分支
 9. 只有有release-1.x分支,出现的bug分支就合并到release-1.x上面,因为release-1.x最后也回合并到develop分支上
 
+###临时分支
+1. 功能性的feature分支
+2. 预发布release分支
+3. 修补漏洞fixbug分支
+
 ###上面第6步说明
 ```
 git checkout master 
