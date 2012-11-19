@@ -13,10 +13,12 @@ User.short.find(:all)
 ```
 
 ###使用include
+```
 @events = Event.find(:all, :include => [:group])
 @events.each do |e|
   e.group.title
 end
+```
 
 ###使用include设定
 ```
