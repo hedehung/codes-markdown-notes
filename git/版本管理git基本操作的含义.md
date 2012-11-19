@@ -202,6 +202,10 @@ git status -sb
 ```
 git log --oneline --decorate
 git log -p -2 #显示2次详细差异
+git log --stat #显示简要的增改行统计
+git log --since=2.weeks
+git log --since=2012-11-20 
+git log --since=2 years 1 day 3 minutes ago
 ```
 3. 推送分支并且启动跟踪
 ```
