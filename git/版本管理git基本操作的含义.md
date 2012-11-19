@@ -153,6 +153,16 @@ git reset --hard origin/master
 2. 预发布release分支(从develop分支创建,开发完成合并到develop和master)
 3. 修补漏洞fixbug分支(从master分支创建,开发完成合并到develop和master)
 
+###上面第6步说明
+```
+git checkout master 
+git merge --no-ff release-1.x
+git tag -a 1.x
+git checkout develop 
+git merge --no-ff release-1.x
+git branch -d release-1.x
+```
+
 ###功能性分支典型操作
 ```
 git checkout -b feature-x develop
@@ -181,16 +191,6 @@ git tag -a 0.1.1
 git checkout develop 
 git merge --no-ff fixbug-0.1
 git branch -d fixbug-0.1
-```
-
-###上面第6步说明
-```
-git checkout master 
-git merge --no-ff release-1.x
-git tag -a 1.x
-git checkout develop 
-git merge --no-ff release-1.x
-git branch -d release-1.x
 ```
 
 ###某些tips  
