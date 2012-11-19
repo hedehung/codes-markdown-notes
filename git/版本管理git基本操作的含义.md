@@ -185,8 +185,6 @@ git show :/fix 或 git show :/^Merge
 ```
 9. 初始化并且添加远程仓库
 ```
-mkdir cn_xx_com
-cd cn_xx_com
 git init
 touch README
 git add README
