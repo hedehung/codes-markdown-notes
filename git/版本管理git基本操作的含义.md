@@ -1,3 +1,7 @@
+###
+1. origin(remote) 是 Repository 的版本
+2. master(branch) 是 local 端, 正在修改的版本
+
 ###git文件三种状态
 1. commited已提交,文件已经安全的保存到本地数据库.
 2. modified已修改,文件被修改但是还没有提交保存.
@@ -110,6 +114,11 @@ git tag 1.0.0 1b2e1d63ff 或 git tag -a v1.2 -m '稳定1.2版本'
 git tag 或者 git tag -l "v1.4.*"
 ```
 
+###删除标签
+```
+git tag -d v1.2
+```
+
 ###查看相应标签的版本信息
 ```
 git show v1.4
@@ -217,4 +226,12 @@ git branch --contains 50f3754
 8. 查询包含某个注释的上次提交
 ```
 git show :/fix 或 git show :/^Merge
+```
+9. 初始化并且添加远程仓库   
+```
+git init
+git add README
+git commit -m 'first commit'
+git remote add origin git@host:project.git
+git push -u origin master
 ```
