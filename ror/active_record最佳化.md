@@ -22,7 +22,7 @@ end
 
 ###使用include设定
 ```
-class User <ActiveRecord::Base 
+class User < ActiveRecord::Base 
   has_one :foo, :include => [:bar]
 end
 
