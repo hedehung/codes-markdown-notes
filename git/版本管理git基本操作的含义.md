@@ -110,6 +110,11 @@ git tag 1.0.0 1b2e1d63ff 或 git tag -a v1.2 -m '稳定1.2版本'
 git tag 或者 git tag -l "v1.4.*"
 ```
 
+###删除标签
+```
+git tag -d v1.2
+```
+
 ###查看相应标签的版本信息
 ```
 git show v1.4
