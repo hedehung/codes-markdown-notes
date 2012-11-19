@@ -201,6 +201,7 @@ git status -sb
 2. 日志显示分支和tag
 ```
 git log --oneline --decorate
+git log -p -2 #显示2次详细差异
 ```
 3. 推送分支并且启动跟踪
 ```
