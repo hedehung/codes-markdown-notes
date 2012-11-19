@@ -186,9 +186,8 @@ git show :/fix 或 git show :/^Merge
 9. 初始化并且添加远程仓库
 ```
 git init
-touch README
 git add README
 git commit -m 'first commit'
-git remote add origin git@host:xx.git
+git remote add origin git@8.8.8.8:project.git
 git push -u origin master
 ```
