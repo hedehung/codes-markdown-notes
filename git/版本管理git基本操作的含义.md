@@ -188,6 +188,6 @@ git show :/fix 或 git show :/^Merge
 git init
 git add README
 git commit -m 'first commit'
-git remote add origin git@8.8.8.8:project.git
+git remote add origin git@host:project.git
 git push -u origin master
 ```
