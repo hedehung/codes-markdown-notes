@@ -5,6 +5,11 @@ git reset HEAD^
 git reset HEAD~1
 ```
 
+###用于清除跟踪文件的修改
+```
+git reset --hard HEAD
+```
+
 ###撤销最后一次修改并清除本地修改
 ```
 git reset --hard HEAD^
