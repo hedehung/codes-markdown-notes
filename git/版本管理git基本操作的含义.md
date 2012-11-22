@@ -148,6 +148,11 @@ git reset --hard origin/master
 8. hotfix分支修复后合并到master和develop分支,然后删除hotfix分支
 9. 只有有release-1.x分支,出现的bug分支就合并到release-1.x上面,因为release-1.x最后也回合并到develop分支上
 
+###临时分支
+1. 功能性的feature分支(从develop分支创建,开发完成合并到develop)
+2. 预发布release分支(从develop分支创建,开发完成合并到develop和master)
+3. 修补漏洞fixbug分支(从master分支创建,开发完成合并到develop和master)
+
 ###上面第6步说明
 ```
 git checkout master 
@@ -158,6 +163,36 @@ git merge --no-ff release-1.x
 git branch -d release-1.x
 ```
 
+###功能性分支典型操作
+```
+git checkout -b feature-x develop
+git checkout develop
+git merge --no-ff feature-x 
+git branch -d feature-x
+```
+
+###预发布分支典型操作
+```
+git checkout -b release-1.2 develop 
+git checkout master 
+git merge --no-ff release-1.2
+git tag -a 1.2 
+git checkout develop 
+git merge --no-ff release-1.2 
+git branch -d release-1.2
+```
+
+###漏洞分支典型操作
+```
+git checkout -b fixbug-0.1 master 
+git checkout master 
+git merge --no-ff fixbug-0.1
+git tag -a 0.1.1
+git checkout develop 
+git merge --no-ff fixbug-0.1
+git branch -d fixbug-0.1
+```
+
 ###某些tips  
 1. 简短的状态信息
 ```
@@ -166,6 +201,11 @@ git status -sb
 2. 日志显示分支和tag
 ```
 git log --oneline --decorate
+git log -p -2 #显示2次详细差异
+git log --stat #显示简要的增改行统计
+git log --since=2.weeks
+git log --since=2012-11-20 
+git log --since=2 years 1 day 3 minutes ago
 ```
 3. 推送分支并且启动跟踪
 ```
