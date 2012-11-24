@@ -8,7 +8,6 @@ wget http://prdownload.berlios.de/ncurses-ruby/ncurses-ruby-1.3.1.tar.bz2
 * ruby 1.8 <http://www.ruby-lang.org/>
 * a recent version of ncurses
 * ncurses-ruby <http://ncurses-ruby.berlios.de/> 
-```
 
 ###切换到1.8.7环境 
 ```
