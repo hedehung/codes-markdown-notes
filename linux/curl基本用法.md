@@ -31,15 +31,6 @@ curl --data "data=xxx" example.com/form.cgi
 curl --data-urlencode "date=April 1" example.com/form.cgi
 ```
 
-###文件上传 
-```
-<form method="POST" enctype='multipart/form-data' action="upload.cgi">
-　　<input type=file name=upload>
-　　<input type=submit name=press value="OK">
-</form>
-curl --form upload=@localfilename --form press=OK example.com/upload.cgi
-```
-
 ###提供referer字段
 ```
 curl --referer http://www.example.com http://www.example.com
