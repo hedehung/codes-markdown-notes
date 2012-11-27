@@ -1,4 +1,4 @@
-### 直接比较当前开发后的改动
+### 直接比较当前开发后的改动(目前位置和暂存之间的差别)
 ```
 git diff
 ```
@@ -33,4 +33,14 @@ git diff ORIG_HEAD
 ```
 git diff --stat
 git diff --stat ORIG_HEAD
+```
+
+###比较目前位置和仓库的差别
+```
+git diff HEAD 
+```
+
+###比较目前位置和master的差别
+```
+git diff master
 ```

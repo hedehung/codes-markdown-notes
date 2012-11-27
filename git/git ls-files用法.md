@@ -22,3 +22,13 @@ git cat-files -t SHA1
 ```
 git cat-file type SHA1
 ```
+
+###查看已经删除的文件
+```
+git ls-files -d
+```
+
+###将已删除的文件还原
+```
+git ls-files -d | xargs git checkout
+```
