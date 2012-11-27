@@ -65,3 +65,17 @@ esac
 
 exit 0
 ```
+
+###安装
+```
+chmod +x /etc/init.d/nginx 
+```
+
+###系统级别开机运行
+```
+#debian-based
+update-rc.d –f nginx defaults
+#redhat based 
+chkconfig --add nginx
+chkconfig --list nginx
+```
