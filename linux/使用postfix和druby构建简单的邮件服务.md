@@ -22,7 +22,7 @@ mynetworks = mailserver.abc.com
 ###重启postfix服务
 
 ```
-sudo service postfix restarts
+sudo service postfix restart
 ```
 
 ###修改主机名称
@@ -101,10 +101,10 @@ require 'drb'
 require 'base64'
 
 MS_IP = "邮件服务器外网ip地址"
-MS_PORT = "druby暴露的端口s"
+MS_PORT = "druby暴露的端口"
 ms = DRbObject.new_with_uri("druby://#{MS_IP}:#{MS_PORT}")
 
-ms.send_mail_to_user("zhangsan@abc.coms", Base64.encode64("中文test"), Base64.encode64("中文test body goes here."))
+ms.send_mail_to_user("zhangsan@abc.com", Base64.encode64("中文test"), Base64.encode64("中文test body goes here."))
 ```
 
 ###查看druby的连接
@@ -113,7 +113,7 @@ ms.send_mail_to_user("zhangsan@abc.coms", Base64.encode64("中文test"), Base64.
 sudo lsof -i:9000
 ```
 
-###添加spf、TXTs验证和主机A记录防止垃圾邮件
+###添加spf、TXT验证和主机A记录防止垃圾邮件
 
 ```
 v=spf1 ipv4:外网ip地址 a mx ~all
@@ -122,6 +122,6 @@ v=spf1 ipv4:外网ip地址 a mx ~all
 ###需要注意的地方
 1. 必须使用base64编码，否则只能发送英文邮件。
 2. 邮件头的Date是必须的，否则网易等会在邮件正文中插入message_id和发送时间，但是没有base64编码，邮件正文会显示乱码。
-3. druby构建的RMI服务telnet必须以域名防止进入，否则rcpt to会发生relay access denied错误。
+3. druby构建的RMI服务telnet必须以域名方式进入，否则rcpt to会发生relay access denied错误。
 4. A记录是必须要添加的，邮件服务器会反向追踪主机地址。
 5s. 可以通过查看邮件信头得到邮件接受服务器和spf的验证信息。
