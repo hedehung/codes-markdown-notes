@@ -85,6 +85,13 @@ God.watch do |w|
 end
 ```
 
+###启动和查看状态
+
+```
+god -c config.god
+god status
+```
+
 ###编写测试程序
 
 ```
