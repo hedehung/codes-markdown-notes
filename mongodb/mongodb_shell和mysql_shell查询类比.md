@@ -52,7 +52,7 @@ select username from users;
 
 ###更新
 ```
-db.users.update({username: 'zhangsan'}, {"$set": {username: "lisi"}})
+db.users.update({username: 'zhangsan'}, {"$set": {username: "lisi"}}, {multi: true})
 update users set username='lisi' where username='zhangsan';
 ```
 
