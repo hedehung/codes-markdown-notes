@@ -12,6 +12,12 @@ use mydb
 use mydb;
 ```
 
+###删除数据库
+```
+db.dropDatabase()
+drop database db if exists db;
+```
+
 ###列出表
 ```
 show collections
@@ -24,10 +30,10 @@ db.users.remove()
 truncate table users;
 ```
 
-###删除数据库
+###删除表
 ```
 db.users.drop()
-drop database users;
+drop table users if exists users;
 ```
 
 ###插入
