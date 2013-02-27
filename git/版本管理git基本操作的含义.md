@@ -1,4 +1,4 @@
-###
+###remote和branch
 1. origin(remote) 是 Repository 的版本
 2. master(branch) 是 local 端, 正在修改的版本
 
