@@ -376,3 +376,62 @@ max-width: 700px;
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 ```
+
+#三种预定义的图形样式:
+
+```html
+<img src="..." class="img-rounded">
+<img src="..." class="img-circle">
+<img src="..." class="img-polaroid">
+```
+
+#内嵌风格的well效果:
+
+```html
+<div class="well">
+	// ...
+</div>
+
+<div class="well well-large">
+    // ...
+</div>
+```
+
+<div class="well well-small">
+    //...
+</div>
+
+#关闭按钮:
+
+```html
+<button class="close">&times;</button>
+<a class="close" href="#">&times;</a>
+```
+
+#帮助样式:
+
+```css
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.muted {
+    color: #999;
+}
+
+.clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+    	display: table;
+    	content: "";
+    }
+    &:after {
+    	clear: both;
+    }
+}
+```
