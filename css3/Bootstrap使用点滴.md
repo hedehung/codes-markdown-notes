@@ -401,11 +401,13 @@ max-width: 700px;
     //...
 </div>
 
-#关闭按钮:
+#不使用图标和字体的关闭按钮:
 
 ```html
 <button class="close">&times;</button>
 <a class="close" href="#">&times;</a>
+// 使用字体的
+<i class="icon-remove"></i>
 ```
 
 #帮助样式:
