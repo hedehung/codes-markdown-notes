@@ -11,8 +11,8 @@
 2. 搭配瑞士军刀按需加载
 
 ```
-Modernizer.load({
-	test: Modernizer.mq("only all"),
+Modernizr.load({
+	test: Modernizr.mq("only all"),
 	nope: "js/respond.min.js"
 });
 ```
