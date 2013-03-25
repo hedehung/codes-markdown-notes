@@ -28,3 +28,11 @@ box-shadow和text-shadow差不多，但是要加浏览器前缀:
 ```
 
 盒阴影配合border-radius实现圆圈的边框有不错的效果.
+
+```
+.element {
+	box-shadow: 1px 1px 3px #fff, -1px 1px 3px #fff;
+	border-radius: 200px;
+	border: 1px solid #000;
+}
+```
