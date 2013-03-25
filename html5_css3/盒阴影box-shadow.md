@@ -31,7 +31,7 @@ box-shadow和text-shadow差不多，但是要加浏览器前缀:
 
 ```
 .element {
-	box-shadow: 1px 1px 3px #fff, -1px 1px 3px #fff;
+	box-shadow: 1px 1px 3px #fff, -1px -1px 3px #fff;
 	border-radius: 200px;
 	border: 1px solid #000;
 }
