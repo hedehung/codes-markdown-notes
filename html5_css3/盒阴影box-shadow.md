@@ -26,4 +26,5 @@ box-shadow和text-shadow差不多，但是要加浏览器前缀:
 	           inset 0 0 70px hsla(0, 97%, 53%, 1);
 }
 ```
-```
+
+盒阴影配合border-radius实现圆圈的边框有不错的效果.
