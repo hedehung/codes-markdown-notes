@@ -1,5 +1,5 @@
 # 目录
-http://mirrors.jenkins-ci.org/war/latest/jenkins.war
+http://mirrors.jenkins-ci.org/war/latest/jenkins.war  
 /var/www/jenkins/
 
 # java

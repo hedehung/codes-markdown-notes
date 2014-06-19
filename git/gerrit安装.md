@@ -245,3 +245,14 @@ Optional values:
 
 git-review的简介和基本使用方法见[http://www.mediawiki.org/wiki/Gerrit/git-review](http://www.mediawiki.org/wiki/Gerrit/git-review)  
 git-review的github地址见[https://github.com/openstack-infra/git-review](https://github.com/openstack-infra/git-review)
+
+# 安装delete-project插件
+
+```
+ssh -p 29418 wangbo@192.168.0.241 gerrit plugin add --name delete-project - < ./delete-project-2.8-SNAPSHOT.jar
+```
+
+插件下载参考:
+
+* [https://code.google.com/p/gerrit/issues/detail?id=349](https://code.google.com/p/gerrit/issues/detail?id=349)
+* [https://gerrit.googlecode.com/issues/attachment?aid=3490070000&name=delete-project-2.8-SNAPSHOT.jar&token=ABZ6GAf-eqHYym0P748lV30IFPpTNpwb-Q%3A1401351828685](https://gerrit.googlecode.com/issues/attachment?aid=3490070000&name=delete-project-2.8-SNAPSHOT.jar&token=ABZ6GAf-eqHYym0P748lV30IFPpTNpwb-Q%3A1401351828685)
